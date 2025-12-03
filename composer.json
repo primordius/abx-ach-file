@@ -26,7 +26,6 @@
         }
     },
     "require": {
-        "ext-ssh2": "*",
         "ext-bcmath": "*"
     },
     "require-dev": {
