@@ -1,13 +1,13 @@
 {
-    "name": "revenuewire/ach-file",
+    "name": "primordius/abx-ach-file",
     "type": "library",
     "description": "Create and read ACH Payment files",
-    "homepage": "https://github.com/revenuewire/ach-payment-file",
+    "homepage": "https://github.com/primordius/abx-ach-payment-file",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "Matthew Casiro",
-            "email": "mattcasiro@gmail.com"
+            "name": "Robert Greer",
+            "email": "primordius@live.com"
         }
     ],
     "autoload": {
