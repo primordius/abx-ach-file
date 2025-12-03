@@ -246,6 +246,14 @@ class EntryDetailRecord extends FileComponent
         ];
     }
 
+    public function getBlockCount(): int
+    {
+        if ($this->hasAddendaRecord()) {
+            return 2;
+        }
+        return 1;
+    }
+
     /**
      * Returns true if an addenda record is included/expected, otherwise returns false.
      *
@@ -262,7 +270,7 @@ class EntryDetailRecord extends FileComponent
     /**
      * Returns the Addenda record, if one exists.
      *
-     * @return AddendaRecord|null
+     * @return AddendaRecord
      */
     public function getAddendaRecord(): AddendaRecord
     {
