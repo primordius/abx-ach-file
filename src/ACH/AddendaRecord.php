@@ -31,7 +31,7 @@ abstract class AddendaRecord extends FileComponent
      * Addenda Type Code in fixed position 02-03.
      *
      * @param string $input
-     * @return ReturnEntryAddenda|NoticeOfChangeAddenda
+     * @return ReturnEntryAddenda|NoticeOfChangeAddenda|CCDAddenda
      * @throws ValidationException
      */
     public static function buildFromString($input)
@@ -41,6 +41,9 @@ abstract class AddendaRecord extends FileComponent
                 return ReturnEntryAddenda::buildFromString($input);
             case NoticeOfChangeAddenda::class:
                 return NoticeOfChangeAddenda::buildFromString($input);
+            case CCDAddenda::class:
+                return CCDAddenda::buildFromString($input);
+            
             default:
                 throw new \InvalidArgumentException('Unrecognized addenda type');
         }
@@ -57,6 +60,8 @@ abstract class AddendaRecord extends FileComponent
                 return NoticeOfChangeAddenda::class;
             case '99':
                 return ReturnEntryAddenda::class;
+            case '05':
+                return CCDAddenda::class;
             default:
                 return false;
         }
